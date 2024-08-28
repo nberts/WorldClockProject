@@ -2,3 +2,11 @@ body {
   background-color: bisque;
   color: brown;
 }
+
+h1 {
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+}
