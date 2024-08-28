@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>World Clock - Nina B</title>
     <link rel="stylesheet" href="src/style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.45/moment-timezone-with-data-1970-2030.js"></script>
   </head>
   <body>
     <div class="container">
@@ -18,21 +20,21 @@
         <option value="sydney">🇦🇺 Sydney</option>
       </select>
 
-      <div class="city">
+      <div class="city" id="paris">
         <div>
           <h2>🇫🇷 Paris</h2>
           <div class="date">August 28th 2024</div>
         </div>
         <div class="time">15:58:13 <small>PM</small></div>
       </div>
-      <div class="city">
+      <div class="city" id="toronto">
         <div>
           <h2>🇨🇦 Toronto</h2>
           <div class="date">August 28th 2024</div>
         </div>
         <div class="time">15:58:13 <small>PM</small></div>
       </div>
-      <div class="city">
+      <div class="city" id="dubai">
         <div>
           <h2>🇦🇪 Dubai</h2>
           <div class="date">August 28th 2024</div>
