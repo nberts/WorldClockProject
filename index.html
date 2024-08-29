@@ -14,30 +14,35 @@
 
       <select id="city">
         <option value="">Select a city...</option>
+        <option value="current">🎯 My Current Location</option>
         <option value="Europe/London">🇬🇧 London</option>
         <option value="America/New_York">🇺🇸 New York</option>
         <option value="Asia/Tokyo">🇯🇵 Tokyo</option>
         <option value="Australia/Sydney">🇦🇺 Sydney</option>
+        <option value="Europe/Istanbul">🇹🇷 Istanbul</option>
+        <option value="Europe/Athens">🇬🇷 Athens</option>
+        <option value="Asia/Seoul">🇰🇷 Seoul</option>
+        <option value="Europe/Stockholm">🇸🇪 Stockholm</option>
       </select>
 
       <div id="cities">
-        <div class="city" id="paris">
+        <div class="city" id="paris" data-timezone="Europe/Paris">
           <div>
-            <h2>Paris</h2>
+            <h2>🇫🇷 Paris</h2>
             <div class="date">August 28th 2024</div>
           </div>
           <div class="time">15:58:13 <small>PM</small></div>
         </div>
-        <div class="city" id="toronto">
+        <div class="city" id="toronto" data-timezone="America/Toronto">
           <div>
-            <h2>Toronto</h2>
+            <h2>🇨🇦 Toronto</h2>
             <div class="date">August 28th 2024</div>
           </div>
           <div class="time">15:58:13 <small>PM</small></div>
         </div>
-        <div class="city" id="dubai">
+        <div class="city" id="dubai" data-timezone="Asia/Dubai">
           <div>
-            <h2>Dubai</h2>
+            <h2>🇦🇪 Dubai</h2>
             <div class="date">August 28th 2024</div>
           </div>
           <div class="time">15:58:13 <small>PM</small></div>
