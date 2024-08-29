@@ -62,12 +62,30 @@ h2 {
   line-height: 48px;
 }
 
+#reset-button {
+  border-radius: 50px;
+  background-color: #94c5cc;
+  color: #000100;
+  padding: 20px;
+  margin: 0 auto;
+  font-size: 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+#reset-button:hover {
+  background-color: orangered;
+}
+
 footer {
   text-align: center;
   font-size: 16px;
-  color: #f8f8f8;
+  color: #000100;
 }
 
 a {
-  color: #76b5be;
+  color: orangered;
+}
+
+a:hover {
+  color: #086375;
 }

@@ -44,7 +44,7 @@ function updateCity(event) {
   }
 
   let cityName = cityTimeZone.replace("_", " ").split("/")[1];
-  let cityFlag = getFlagEmoji(cityTimeZone); // get flag emoji
+  let cityFlag = getFlagEmoji(cityTimeZone); // get flag
 
   let cityTime = moment().tz(cityTimeZone);
   let citiesElement = document.querySelector("#cities");
@@ -70,13 +70,58 @@ function updateCity(event) {
   //add new city info to displayed list
   citiesElement.insertAdjacentHTML("afterbegin", newCityHTML);
 
+  //show reset button
+  let resetButton = document.getElementById("reset-button");
+  if (resetButton) {
+    resetButton.style.display = "block";
+  } else {
+    console.error("Reset button not found"); //dbeug log
+  }
+
   //reset selection to "Select a city..."
   resetCitySelection();
+}
+
+function resetList() {
+  let citiesElement = document.querySelector("#cities");
+  citiesElement.innerHTML = "";
+
+  let originalCities = `
+        <div class="city" id="paris" data-timezone="Europe/Paris">
+          <div>
+            <h2>🇫🇷 Paris</h2>
+            <div class="date">August 28th 2024</div>
+          </div>
+          <div class="time">15:58:13 <small>PM</small></div>
+        </div>
+        <div class="city" id="toronto" data-timezone="America/Toronto">
+          <div>
+            <h2>🇨🇦 Toronto</h2>
+            <div class="date">August 28th 2024</div>
+          </div>
+          <div class="time">15:58:13 <small>PM</small></div>
+        </div>
+        <div class="city" id="dubai" data-timezone="Asia/Dubai">
+          <div>
+            <h2>🇦🇪 Dubai</h2>
+            <div class="date">August 28th 2024</div>
+          </div>
+          <div class="time">15:58:13 <small>PM</small></div>
+        </div> `;
+
+  citiesElement.insertAdjacentHTML("afterbegin", originalCities);
+
+  let resetButton = document.getElementById("reset-button");
+  resetButton.style.display = "none";
+
+  updateTime();
 }
 
 updateTime();
 setInterval(updateTime, 1000);
 
 let citiesSelectElement = document.querySelector("#city");
-
 citiesSelectElement.addEventListener("change", updateCity);
+
+let resetButton = document.getElementById("reset-button");
+resetButton.addEventListener("click", resetList);
